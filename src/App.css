@@ -2,19 +2,12 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
+  height: 50px;
   background-color: #282c34;
-  height: 40px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: flex-end; */
+  justify-content: center;
   top: 0;
   position: sticky;
 }
@@ -23,23 +16,36 @@
   width: 80%;
   max-width: 1000px;
   height: 100%;
-  /* background-color: blue; */
   display: flex;
-  flex-direction: row;
 }
 
 .App-header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   color: white;
   text-decoration: none;
-  font-size: 20px;
-  background-color: rgba(255, 2, 2, 0.363);
-  padding: 5px;
-  padding-bottom: 0px;
+  font-size: 22px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
 }
 
 .App-header-link:hover {
-  color: white;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.363);
-  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.App-header-link:hover::after {
+  padding-left: 80%;
+  /* transition: all 0.1s; */
+}
+
+.App-header-link::after {
+  content: "";
+  background: white;
+  padding-top: 2px;
+  opacity: 0.4;
+  border-radius: 8px;
+  transition: all 0.1s;
 }
