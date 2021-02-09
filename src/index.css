@@ -5,10 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(26, 28, 32);
+  background-color: var(--primaryBackgroundColor);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  --primaryBackgroundColor: rgb(26, 28, 32);
+  --primaryTextColor: white;
+  --lightTextColor: rgb(200, 200, 200);
+  --headerColor: #282c34;
+  --shadowColor: rgb(21, 21, 22);
+  --mouseOverColor: rgba(255, 255, 255, 0.05);
+}
+
+html.light {
+  --primaryBackgroundColor: rgb(251, 251, 251);
+  --primaryTextColor: rgb(26, 28, 32);
+  --lightTextColor: rgb(103, 110, 122);
+  --headerColor: #f5f5f5;
+  --shadowColor: lightgray;
+  --mouseOverColor: rgba(0, 0, 0, 0.05);
 }

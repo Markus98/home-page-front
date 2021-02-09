@@ -1,0 +1,33 @@
+.App-header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--lightTextColor);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.App-header-link:hover {
+  background-color: var(--mouseOverColor);
+  color: var(--primaryTextColor);
+}
+
+.App-header-link:hover > .header-link-bar {
+  padding-left: 80%;
+  transition: all 0.1s;
+  opacity: 0.4;
+}
+
+.header-link-bar {
+  content: "";
+  background: var(--primaryTextColor);
+  padding-left: 70%;
+  padding-top: 2px;
+  opacity: 0;
+  border-radius: 8px;
+  transition: all 0.3s;
+}

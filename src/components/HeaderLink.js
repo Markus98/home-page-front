@@ -1,3 +1,4 @@
+import "./HeaderLink.css"
 import { Link } from "react-router-dom"
 
 function HeaderLink({to, location, name}) {
@@ -6,7 +7,7 @@ function HeaderLink({to, location, name}) {
         opacity: 1
     };
     const linkSelectedStyle = {
-        color: "white"
+        color: "var(--primaryTextColor)"
     };
     
     let [ barStyle, linkStyle ] = [{},{}];
