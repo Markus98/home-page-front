@@ -1,0 +1,16 @@
+.articleCardLink {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+}
+
+.articleCardLink:hover .articleCardTitle {
+    text-decoration: underline;
+}
+
+.articleCard {
+    background: rgba(0,0,0,0.3);
+}
+
+.articleCardTitle {
+
+}

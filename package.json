@@ -17,6 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-public": "set PORT=80 && react-scripts start",
+    "start-temp-db": "cd temp_db && json-server --watch db.json -p 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

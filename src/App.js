@@ -2,6 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header'
 import HomePage from './components/HomePage';
+import ProjectsPage from './components/ProjectsPage';
 
 function App() {
 
@@ -10,10 +11,13 @@ function App() {
       <Header />
       <div className="PageContent">
         <Switch>
-          <Route path="/projects">
+          <Route path="/projects/:projectid">
             <div className="ContentTextArea">
-              Here are projects
+              Here is a specific project
             </div>
+          </Route>
+          <Route path="/projects">
+            <ProjectsPage/>
           </Route>
           <Route path="/blog">
             <div className="ContentTextArea">
