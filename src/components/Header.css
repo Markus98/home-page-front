@@ -1,5 +1,5 @@
 .App-header {
-    height: 50px;
+    height: var(--headerHeight);
     background-color: var(--headerColor);
     box-shadow: 0px 4px 5px var(--shadowColor);
     width: 100%;

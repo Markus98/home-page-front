@@ -15,6 +15,7 @@ function Header() {
                 <HeaderLink name="Home" to="/" location={pathname} />
                 <HeaderLink name="Projects" to="/projects" location={pathname} />
                 <HeaderLink name="Blog" to="/blog" location={pathname} />
+                <HeaderLink name="Contact" to="/contact" location={pathname} />
             </div>
             <div className="App-header-right">
                 <DarkToggle />
