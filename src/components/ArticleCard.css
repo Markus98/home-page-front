@@ -1,6 +1,7 @@
 .articleCardLink {
     color: var(--primaryTextColor);
     text-decoration: none;
+    padding: 10px;
 }
 
 .articleCardLink:hover .articleCardTitle {
@@ -9,8 +10,20 @@
 
 .articleCard {
     background: rgba(0,0,0,0.3);
+    display: flex;
 }
 
 .articleCardTitle {
 
+}
+
+.articleCardThumbnail {
+    object-fit: cover;
+    width: 30%;
+    padding: 10px;
+}
+
+.articleCardTextArea {
+    width: 100%;
+    padding-bottom: 20px;
 }
