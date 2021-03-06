@@ -18,7 +18,14 @@ function ProjectsPage() {
         <div className="ContentTextArea">
             <h1>This is the home of my projects.</h1>
             {projectCards.map(card => 
-                <ArticleCard id={card.id} title={card.title} abstract={card.abstract} thumbnail={card.thumbnail} />
+                <ArticleCard 
+                    id={card.id} 
+                    title={card.title} 
+                    abstract={card.abstract} 
+                    thumbnail={card.thumbnail} 
+                    ts={card.ts} 
+                    key={card.id}
+                />
             )}
         </div>
     )

@@ -14,7 +14,8 @@
 }
 
 .articleCardTitle {
-
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .articleCardThumbnail {
@@ -26,4 +27,9 @@
 .articleCardTextArea {
     width: 100%;
     padding-bottom: 20px;
+}
+
+.articleCardTimeStamp {
+    font-size: 10pt;
+    margin-bottom: 10px;
 }
