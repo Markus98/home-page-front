@@ -21,6 +21,17 @@
     display: flex;
 }
 
+@media only screen and (max-width: 600px) {
+    .App-header-left {
+        visibility: hidden;
+        display: none;
+    }
+    .App-header-right {
+        visibility: hidden;
+        display: none;
+    }
+}
+
 .App-header-right {
     flex: 1;
     display: flex;
