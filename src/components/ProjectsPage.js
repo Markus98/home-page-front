@@ -9,7 +9,7 @@ function ProjectsPage() {
     const [ projectCards, setProjectCards ] = useState([]);
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_API_ENDPOINT + "/projectslist").then(response => {
+        axios.get("/api/projects").then(response => {
             setProjectCards(response.data);
         });
     }, []);

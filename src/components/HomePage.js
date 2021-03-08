@@ -5,7 +5,7 @@ function HomePage() {
     const [ pageContent, setPageContent ] = useState("Content loading...");
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_API_ENDPOINT + "/home").then((response)=> {
+        axios.get("/api/home").then((response)=> {
             setPageContent(response.data.content);
         });
     }, []);
