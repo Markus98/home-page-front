@@ -27,7 +27,7 @@
         display: none;
     }
     .App-header-right {
-        visibility: hidden;
+        /* visibility: hidden; */
         display: none;
     }
 }

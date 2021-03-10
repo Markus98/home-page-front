@@ -4,6 +4,7 @@ import Header from './components/Header'
 import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';
 import BlogPage from './components/BlogPage'
+import ContactPage from './components/ContactPage';
 
 function App() {
 
@@ -19,9 +20,7 @@ function App() {
             <ProjectsPage/>
           </Route>
           <Route path="/contact">
-            <div className="ContentTextArea">
-              Here is contact
-            </div>
+            <ContactPage/>
           </Route>
           <Route path="/:page">
             <div>Resource not found.</div>

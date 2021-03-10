@@ -23,9 +23,36 @@
   animation: fade 0.4s ease-in;
 }
 
+.App-content {
+  display: flex;
+  width: 100%;
+}
+
+.App-content-area {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  animation: fade 0.4s ease-in;
+}
+
+.App-content-side {
+  flex: 1;
+  display: flex;
+}
+
 @media only screen and (max-width: 600px) {
   .ContentTextArea {
     width: 100%;
+  }
+  .App-content-area {
+    width: 100%;
+  }
+  .App-content-side {
+    display: none;
+    visibility: hidden;
   }
 }
 
