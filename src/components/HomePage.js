@@ -11,7 +11,13 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: pageContent}} />
+        <div className="App-content">
+            <div className="App-content-side"></div>
+            <div className="App-content-area">
+                <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: pageContent}}></div>
+            </div>
+            <div className="App-content-side"></div>
+        </div>
     );
 }
 

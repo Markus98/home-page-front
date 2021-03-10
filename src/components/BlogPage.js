@@ -15,7 +15,13 @@ function BlogPage({ apipath }) {
     }, []);
 
     return (
-        <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: postContent}} />
+        <div className="App-content">
+            <div className="App-content-side"></div>
+            <div className="App-content-area">
+                <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: postContent}} />
+            </div>
+            <div className="App-content-side"></div>
+        </div>
     );
 }
 

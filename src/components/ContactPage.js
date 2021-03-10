@@ -28,7 +28,7 @@ function ContactPage() {
                         </div>
                         <div className="contact-page__form__input">
                             <label for="msg">Message</label>
-                            <textarea required="true" name="message"  id="msg"  placeholder="Message..." />
+                            <textarea required="true" name="message"  id="msg"  placeholder="message..." />
                         </div>
                         <div id="sendButton">
                             <input type="submit" value="Send"/>
