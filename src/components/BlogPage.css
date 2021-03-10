@@ -1,0 +1,24 @@
+#left {
+    justify-content: flex-end;
+}
+
+#back-button {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    height: 25px;
+    top: 50px;
+    position: sticky;
+}
+
+.arrow {
+    border: solid var(--primaryTextColor);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
