@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';
+import BlogPage from './components/BlogPage'
 
 function App() {
 
@@ -12,22 +13,18 @@ function App() {
       <div className="PageContent">
         <Switch>
           <Route path="/projects/:projectid">
-            <div className="ContentTextArea">
-              Here is a specific project
-            </div>
+            <BlogPage apipath={"/api/projects/"}/>
           </Route>
           <Route path="/projects">
             <ProjectsPage/>
-          </Route>
-          <Route path="/blog">
-            <div className="ContentTextArea">
-              Here is blog
-            </div>
           </Route>
           <Route path="/contact">
             <div className="ContentTextArea">
               Here is contact
             </div>
+          </Route>
+          <Route path="/:page">
+            <div>Resource not found.</div>
           </Route>
           <Route path="/">
             <HomePage/>
