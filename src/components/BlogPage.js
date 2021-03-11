@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import "./BlogPage.css";
 import { Link } from 'react-router-dom';
+import { store } from 'react-notifications-component';
 
 
 
@@ -14,6 +15,13 @@ function BlogPage({ apipath }) {
     useEffect(() => {
         axios.get(postRoute).then(response => {
             setPostContent(response.data.content);
+        }, (error) => {
+            store.addNotification({
+                title: "Error " + error.response.status,
+                message: error.response.data,
+                type: "danger",
+                container: "top-center"
+            });
         });
     }, []);
 

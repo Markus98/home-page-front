@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { store } from 'react-notifications-component';
 
 function HomePage() {
     const [ pageContent, setPageContent ] = useState("Content loading...");
@@ -7,6 +8,13 @@ function HomePage() {
     useEffect(() => {
         axios.get("/api/home").then((response)=> {
             setPageContent(response.data.content);
+        }, (error) => {
+            store.addNotification({
+                title: "Error " + error.response.status,
+                message: error.response.data,
+                type: "danger",
+                container: "top-right"
+            });
         });
     }, []);
 

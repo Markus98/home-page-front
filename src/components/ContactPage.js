@@ -22,7 +22,6 @@ function ContactPage() {
         event.preventDefault();
         const messageObject = { fname, lname, email, message };
         axios.post('/api/contact', messageObject).then((response) => {
-            // NotificationManager.success(response.data, 'Success!');
             store.addNotification({
                 title: "Success!",
                 message: response.data,
@@ -36,7 +35,6 @@ function ContactPage() {
             setFormDisabled(true);
             setSendButtonDisabled(true);
         }, (error) => {
-            // NotificationManager.error(error.response.data, 'Error ' + error.response.status);
             store.addNotification({
                 title: "Error " + error.response.status,
                 message: error.response.data,
