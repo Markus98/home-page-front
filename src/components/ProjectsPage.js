@@ -2,6 +2,7 @@ import axios from 'axios';
 import { store } from 'react-notifications-component';
 import { useEffect, useState } from 'react';
 import ArticleCard from './ArticleCard';
+import { ReactTitle } from 'react-meta-tags';
 
 function ProjectsPage() {
 
@@ -23,6 +24,7 @@ function ProjectsPage() {
 
     return (
         <div className="App-content-area">
+            <ReactTitle title="Projects - Markus Tuominen"/>
             <div className="ContentTextArea">
                 <h1>This is the home of my projects.</h1>
                 {projectCards.map(card => 

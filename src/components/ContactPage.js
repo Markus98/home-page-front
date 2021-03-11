@@ -3,6 +3,7 @@ import './ContactPage.css';
 import axios from 'axios';
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
+import { ReactTitle } from 'react-meta-tags';
 
 function ContactPage() {
 
@@ -53,6 +54,7 @@ function ContactPage() {
 
     return (
         <div className="App-content">
+            <ReactTitle title="Contact - Markus Tuominen"/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
                 <div className="contact-page">

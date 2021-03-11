@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { store } from 'react-notifications-component';
+import { ReactTitle } from 'react-meta-tags';
 
 function HomePage() {
     const [ pageContent, setPageContent ] = useState("Content loading...");
@@ -20,6 +21,7 @@ function HomePage() {
 
     return (
         <div className="App-content">
+            <ReactTitle title="Home - Markus Tuominen"/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
                 <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: pageContent}}></div>
