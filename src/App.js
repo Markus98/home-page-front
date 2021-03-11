@@ -5,11 +5,13 @@ import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';
 import BlogPage from './components/BlogPage'
 import ContactPage from './components/ContactPage';
+import ReactNotification from 'react-notifications-component'
 
 function App() {
 
   return (
     <div className="App">
+      <ReactNotification />
       <Header />
       <div className="PageContent">
         <Switch>

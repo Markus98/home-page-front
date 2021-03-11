@@ -19,6 +19,7 @@
 }
 
 input[type=text], select {
+    font-size: 10pt;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
