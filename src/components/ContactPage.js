@@ -22,6 +22,7 @@ function ContactPage() {
     const sendMessage = (event) => {
         event.preventDefault();
         const messageObject = { fname, lname, email, message };
+        setSendButtonDisabled(true);
         axios.post('/api/contact', messageObject).then((response) => {
             store.addNotification({
                 title: "Success!",
@@ -34,7 +35,6 @@ function ContactPage() {
                 }
             });
             setFormDisabled(true);
-            setSendButtonDisabled(true);
         }, (error) => {
             store.addNotification({
                 title: "Error " + error.response.status,
@@ -46,9 +46,6 @@ function ContactPage() {
                     onScreen: true
                 }
             });
-            if (error.response.status == 403) {
-                setSendButtonDisabled(true);
-            }
         });
     }
 
