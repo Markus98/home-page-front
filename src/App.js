@@ -1,5 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
+import './components/Arrow.css';
 import Header from './components/Header'
 import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';

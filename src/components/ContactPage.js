@@ -55,43 +55,45 @@ function ContactPage() {
             <ReactTitle title="Contact - Markus Tuominen"/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
-                <div className="contact-page">
-                    <div className="contact-page__info">
-                        <div>
-                            <h1>Contact me</h1>
-                            <p>If you want to contact me directly to chat or whatever the reason, send me a message with the form on this page and I will get back to you!</p>
-                        </div>
-                        <div className="social-links">
-                            <h2 className="social-links__title">Social Links</h2>
-                            <div className="social-links__icon-container">
-                                <SocialIcon url="https://www.linkedin.com/in/markus-tuominen-706b0a17a/" network="linkedin" />
-                                <SocialIcon url="https://github.com/Markus98" network="github" />
+                <div className=" padded-content-area">
+                    <div className="contact-page">
+                        <div className="contact-page__info">
+                            <div>
+                                <h1>Contact me</h1>
+                                <p>If you want to contact me directly to chat or whatever the reason, send me a message with the form on this page and I will get back to you!</p>
+                            </div>
+                            <div className="social-links">
+                                <h2 className="social-links__title">Social Links</h2>
+                                <div className="social-links__icon-container">
+                                    <SocialIcon url="https://www.linkedin.com/in/markus-tuominen-706b0a17a/" network="linkedin" />
+                                    <SocialIcon url="https://github.com/Markus98" network="github" />
+                                </div>
                             </div>
                         </div>
+                        <form className="contact-page__form" onSubmit={sendMessage}>
+                            <div id="name-input">
+                                <div className="contact-page__form__input">
+                                    <label htmlFor="fname">First Name *</label>
+                                    <input type="text" onChange={handleFnameChange} value={fname} disabled={formDisabled} required={true} name="firstname" id="fname" placeholder="first name" />
+                                </div>
+                                <div className="contact-page__form__input">
+                                    <label htmlFor="lname">Last Name *</label>
+                                    <input type="text" onChange={handleLnameChange} value={lname} disabled={formDisabled} required={true} name="lastname"  id="lname" placeholder="last name" />
+                                </div>
+                            </div>
+                            <div className="contact-page__form__input">
+                                <label htmlFor="email">Email Address *</label>
+                                <input type="text" onChange={handleEmailChange} value={email} disabled={formDisabled} required={true} name="email"  id="email" placeholder="email" />
+                            </div>
+                            <div className="contact-page__form__input">
+                                <label htmlFor="msg">Message *</label>
+                                <textarea required={true} onChange={handleMessageChange} value={message} disabled={formDisabled} name="message"  id="msg"  placeholder="message..." />
+                            </div>
+                            <div id="sendButton">
+                                <input type="submit" disabled={sendButtonDisabled} value="Send"/>
+                            </div>
+                        </form>
                     </div>
-                    <form className="contact-page__form" onSubmit={sendMessage}>
-                        <div id="name-input">
-                            <div className="contact-page__form__input">
-                                <label htmlFor="fname">First Name *</label>
-                                <input type="text" onChange={handleFnameChange} value={fname} disabled={formDisabled} required={true} name="firstname" id="fname" placeholder="first name" />
-                            </div>
-                            <div className="contact-page__form__input">
-                                <label htmlFor="lname">Last Name *</label>
-                                <input type="text" onChange={handleLnameChange} value={lname} disabled={formDisabled} required={true} name="lastname"  id="lname" placeholder="last name" />
-                            </div>
-                        </div>
-                        <div className="contact-page__form__input">
-                            <label htmlFor="email">Email Address *</label>
-                            <input type="text" onChange={handleEmailChange} value={email} disabled={formDisabled} required={true} name="email"  id="email" placeholder="email" />
-                        </div>
-                        <div className="contact-page__form__input">
-                            <label htmlFor="msg">Message *</label>
-                            <textarea required={true} onChange={handleMessageChange} value={message} disabled={formDisabled} name="message"  id="msg"  placeholder="message..." />
-                        </div>
-                        <div id="sendButton">
-                            <input type="submit" disabled={sendButtonDisabled} value="Send"/>
-                        </div>
-                    </form>
                 </div>
             </div>
             <div className="App-content-side"></div>

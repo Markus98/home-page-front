@@ -43,7 +43,7 @@ function BlogPage({ apipath }) {
         <div className="App-content">
             <ReactTitle title={title}/>
             <div className="App-content-side" id="left">
-                <Link to="/projects" id="back-button"> <i className="arrow"></i> Back</Link>
+                <Link to="/projects" id="back-button"> <i className="arrow left"></i> Back</Link>
             </div>
             <div className="App-content-area">
                 <span className="article-timestamp">{makeTimeStampStr(timestamp)}</span>
