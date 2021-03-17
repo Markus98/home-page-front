@@ -25,7 +25,7 @@ function ProjectsPage() {
     return (
         <div className="App-content-area">
             <ReactTitle title="Projects - Markus Tuominen"/>
-            <div className="ContentTextArea">
+            <div style={{"width": "100%"}}>
                 <h1>My Projects</h1>
                 <p>Here is where I post about my recent projects.</p>
                 {projectCards.map(card => 

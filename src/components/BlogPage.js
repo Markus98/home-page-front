@@ -13,11 +13,15 @@ function BlogPage({ apipath }) {
 
     const [ postContent, setPostContent ] = useState([]);
     const [ title, setTitle ] = useState(document.title);
+    const [ timestamp, setTimestamp ] = useState(0);
+    const [ imagePath, setImagePath ] = useState(null);
 
     useEffect(() => {
         axios.get(postRoute).then(response => {
             setPostContent(response.data.content);
             setTitle(response.data.title);
+            setTimestamp(response.data.ts);
+            setImagePath(response.data.image);
         }, (error) => {
             store.addNotification({
                 title: "Error " + error.response.status,
@@ -29,14 +33,23 @@ function BlogPage({ apipath }) {
         });
     }, []);
 
+    const makeTimeStampStr = (tsInt) => {
+        let dateObj = new Date(tsInt);
+        let month = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(dateObj);
+        return month +  " " + dateObj.getDate() + ", " + dateObj.getFullYear();
+    }
+
     return (
         <div className="App-content">
             <ReactTitle title={title}/>
             <div className="App-content-side" id="left">
-                <Link to="/projects" id="back-button"> <i class="arrow"></i> Back</Link>
+                <Link to="/projects" id="back-button"> <i className="arrow"></i> Back</Link>
             </div>
             <div className="App-content-area">
-                <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: postContent}} />
+                <span className="article-timestamp">{makeTimeStampStr(timestamp)}</span>
+                <h1 className="article-title">{title}</h1>
+                <img className="article-image" src={imagePath} style={{"width": "100%"}} />
+                <div className="article-text-area" dangerouslySetInnerHTML={{__html: postContent}} />
             </div>
             <div className="App-content-side"></div>
         </div>

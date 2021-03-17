@@ -12,7 +12,7 @@
     height: 25px;
     top: 50px;
     position: sticky;
-    margin-top: 38px;
+    margin-top: 54px;
 }
 
 .arrow {
@@ -22,4 +22,25 @@
     padding: 3px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+}
+
+.article-title {
+    margin-top: 0;
+    font-size: 30pt;
+    text-align: center;
+}
+
+.article-timestamp {
+    margin-top: 20px;
+    color: var(--lightTextColor);
+}
+
+.article-text-area {
+    width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+    .article-text-area {
+      width: 100%;
+    }
 }

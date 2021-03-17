@@ -76,7 +76,7 @@ textarea {
     flex-direction: column;
     justify-content: space-between;
     min-width: 40%;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 #name-input {
@@ -106,5 +106,8 @@ input[type=submit]:disabled {
 @media only screen and (max-width: 600px) {
     .contact-page__form {
         width: 100%;
+    }
+    .contact-page__info {
+        padding-right: 0;
     }
 }

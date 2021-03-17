@@ -24,7 +24,7 @@ function HomePage() {
             <ReactTitle title="Home - Markus Tuominen"/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
-                <div className="ContentTextArea" dangerouslySetInnerHTML={{__html: pageContent}}></div>
+                <div className="content-text-area" dangerouslySetInnerHTML={{__html: pageContent}}></div>
             </div>
             <div className="App-content-side"></div>
         </div>
