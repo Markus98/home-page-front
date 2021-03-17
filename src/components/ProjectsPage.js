@@ -26,7 +26,8 @@ function ProjectsPage() {
         <div className="App-content-area">
             <ReactTitle title="Projects - Markus Tuominen"/>
             <div className="ContentTextArea">
-                <h1>This is the home of my projects.</h1>
+                <h1>My Projects</h1>
+                <p>Here is where I post about my recent projects.</p>
                 {projectCards.map(card => 
                     <ArticleCard 
                         id={card.id} 
@@ -36,7 +37,7 @@ function ProjectsPage() {
                         ts={card.ts} 
                         key={card.id}
                     />
-                    )}
+                )}
             </div>
         </div>
     )

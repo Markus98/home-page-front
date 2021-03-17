@@ -1,35 +1,50 @@
-.articleCardLink {
+.article-card-link {
     color: var(--primaryTextColor);
     text-decoration: none;
     padding: 10px;
 }
 
-.articleCardLink:hover .articleCardTitle {
+.article-card-link:hover .article-card-title {
     text-decoration: underline;
 }
 
-.articleCard {
-    background: rgba(0,0,0,0.3);
+.article-card {
+    background: var(--secondaryBackgroundColor);
+    border-width: 1px;
+    border-color: var(--borderColor);
     display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
-.articleCardTitle {
+.article-card-title {
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
 
-.articleCardThumbnail {
+.article-card-thumbnail {
     object-fit: cover;
     width: 30%;
-    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
-.articleCardTextArea {
+.article-card-textarea {
     width: 100%;
     padding-bottom: 20px;
 }
 
-.articleCardTimeStamp {
+.article-card-timestamp {
     font-size: 10pt;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .article-card-thumbnail {
+        width: 100%;
+    }
+    .article-card {
+        flex-direction: column;
+    }
 }
