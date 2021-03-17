@@ -4,6 +4,7 @@ import axios from 'axios';
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
 import { ReactTitle } from 'react-meta-tags';
+import { SocialIcon } from 'react-social-icons';
 
 function ContactPage() {
 
@@ -56,8 +57,17 @@ function ContactPage() {
             <div className="App-content-area">
                 <div className="contact-page">
                     <div className="contact-page__info">
-                        <h1>Contact me</h1>
-                        <p>Please fill out your name and so on so that we can chat.</p>
+                        <div>
+                            <h1>Contact me</h1>
+                            <p>If you want to contact me directly to chat or whatever the reason, send me a message with the form on this page and I will get back to you!</p>
+                        </div>
+                        <div className="social-links">
+                            <h2 className="social-links__title">Social Links</h2>
+                            <div className="social-links__icon-container">
+                                <SocialIcon url="https://www.linkedin.com/in/markus-tuominen-706b0a17a/" network="linkedin" />
+                                <SocialIcon url="https://github.com/Markus98" network="github" />
+                            </div>
+                        </div>
                     </div>
                     <form className="contact-page__form" onSubmit={sendMessage}>
                         <div id="name-input">

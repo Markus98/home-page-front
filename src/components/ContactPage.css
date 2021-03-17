@@ -18,6 +18,34 @@
     flex: 1;
 }
 
+.social-links {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: #494949;
+    border-radius: 5px;
+    align-items: center;
+    width: 80%;
+    max-width: 300px;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links__icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 50%;
+}
+
+.social-links__title {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 input[type=text], select {
     font-size: 10pt;
     width: 100%;
@@ -43,6 +71,9 @@ textarea {
 
 .contact-page__info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 40%;
     padding-right: 5px;
 }
