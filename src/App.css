@@ -10,8 +10,8 @@
 }
 
 .content-text-area {
-  padding: 10px;
   animation: fade 0.4s ease-in;
+  width: 100%;
 }
 
 .ContentImage {
@@ -37,6 +37,8 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .App-content-side {

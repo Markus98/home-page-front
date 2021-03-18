@@ -42,14 +42,16 @@ function BlogPage({ apipath }) {
     return (
         <div className="App-content">
             <ReactTitle title={title}/>
-            <div className="App-content-side" id="left">
+            <div className="App-content-side" id="blogpage-left">
                 <Link to="/projects" id="back-button"> <i className="arrow left"></i> Back</Link>
             </div>
             <div className="App-content-area">
-                <span className="article-timestamp">{makeTimeStampStr(timestamp)}</span>
-                <h1 className="article-title">{title}</h1>
-                <img className="article-image" src={imagePath} style={{"width": "100%"}} />
-                <div className="article-text-area" dangerouslySetInnerHTML={{__html: postContent}} />
+                <div className="padded-content-area">
+                    <span className="article-timestamp">{makeTimeStampStr(timestamp)}</span>
+                    <h1 className="article-title">{title}</h1>
+                    <img className="article-image" src={imagePath} style={{"width": "100%"}} />
+                    <div className="article-text-area" dangerouslySetInnerHTML={{__html: postContent}} />
+                </div>
             </div>
             <div className="App-content-side"></div>
         </div>

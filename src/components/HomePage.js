@@ -31,8 +31,8 @@ function HomePage() {
                     <img id="front-image" src="/images/front_img.png" />
                     <svg id="hello-title-svg" viewBox="0 0 60 24" >
                         <text id="hello-title" x="0" y="0" >
-                            <tspan x="0" dy="1.2em" onClick={test}>Hi,</tspan>
-                            <tspan x="0" dy="1.2em">I'm Markus</tspan>
+                            <tspan x="3" dy="1.2em" onClick={test}>Hi,</tspan>
+                            <tspan x="3" dy="1.2em">I'm Markus</tspan>
                         </text>
                     </svg>
                     <i className="arrow down" id="front-page-down-arrow"></i>
