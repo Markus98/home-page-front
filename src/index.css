@@ -26,6 +26,27 @@ code {
     monospace;
 }
 
+p {
+  font-size: 16pt;
+}
+
+a {
+  color: rgb(23, 172, 241);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.1em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
 html {
   --primaryBackgroundColor: rgb(26, 28, 32);
   --secondaryBackgroundColor: rgb(16, 16, 20);

@@ -2,19 +2,19 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import "./BlogPage.css";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
 
 
 
 function BlogPage({ apipath }) {
-    const postRoute = apipath + useParams().projectid;
-
     const [ postContent, setPostContent ] = useState([]);
     const [ title, setTitle ] = useState(document.title);
     const [ timestamp, setTimestamp ] = useState(0);
     const [ imagePath, setImagePath ] = useState(null);
+    
+    const postRoute = apipath + useParams().projectid;
 
     useEffect(() => {
         axios.get(postRoute).then(response => {
@@ -38,6 +38,11 @@ function BlogPage({ apipath }) {
         let month = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(dateObj);
         return month +  " " + dateObj.getDate() + ", " + dateObj.getFullYear();
     }
+
+    // if searching for article "home", redirect to front page
+    if (useParams().projectid == "home") return (
+        <Redirect to="/" />
+    );
 
     return (
         <div className="App-content">
