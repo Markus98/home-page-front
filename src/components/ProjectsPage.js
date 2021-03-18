@@ -3,15 +3,18 @@ import { store } from 'react-notifications-component';
 import { useEffect, useState } from 'react';
 import ArticleCard from './ArticleCard';
 import { ReactTitle } from 'react-meta-tags';
+import ReactGA from 'react-ga';
 
 function ProjectsPage() {
 
+    const title = "Projects - Markus Tuominen";
 
     const [ projectCards, setProjectCards ] = useState([]);
 
     useEffect(() => {
         axios.get("/api/projects").then(response => {
             setProjectCards(response.data);
+            ReactGA.pageview(window.location.pathname + window.location.search, [], title);
         }, (error) => {
             store.addNotification({
                 title: "Error " + error.response.status,
@@ -24,7 +27,7 @@ function ProjectsPage() {
 
     return (
         <div className="App-content">
-            <ReactTitle title="Projects - Markus Tuominen"/>
+            <ReactTitle title={title}/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
                 <div className="padded-content-area">

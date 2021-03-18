@@ -3,8 +3,12 @@ import { useEffect, useState } from 'react';
 import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
 import "./HomePage.css"
+import ReactGA from 'react-ga';
 
 function HomePage() {
+
+    const title = "Home - Markus Tuominen";
+
     const [ frontImagePath, setFrontImagePath ] = useState("");
     const [ pageContent, setPageContent ] = useState("Content loading...");
 
@@ -12,6 +16,7 @@ function HomePage() {
         axios.get("/api/projects/home").then((response)=> {
             setPageContent(response.data.content);
             setFrontImagePath(response.data.image);
+            ReactGA.pageview(window.location.pathname + window.location.search, [], title);
         }, (error) => {
             store.addNotification({
                 title: "Error " + error.response.status,
@@ -24,7 +29,7 @@ function HomePage() {
 
     return (
         <div className="App-content">
-            <ReactTitle title="Home - Markus Tuominen"/>
+            <ReactTitle title={title}/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
                 <div id="home-introduction-container">

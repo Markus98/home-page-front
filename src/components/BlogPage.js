@@ -5,6 +5,7 @@ import "./BlogPage.css";
 import { Link, Redirect } from 'react-router-dom';
 import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
+import ReactGA from 'react-ga';
 
 
 
@@ -22,6 +23,7 @@ function BlogPage({ apipath }) {
             setTitle(response.data.title);
             setTimestamp(response.data.ts);
             setImagePath(response.data.image);
+            ReactGA.pageview(window.location.pathname + window.location.search, [], response.data.title);
         }, (error) => {
             store.addNotification({
                 title: "Error " + error.response.status,

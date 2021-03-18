@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './ContactPage.css';
 import axios from 'axios';
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css'
 import { ReactTitle } from 'react-meta-tags';
 import { SocialIcon } from 'react-social-icons';
+import ReactGA from 'react-ga';
 
 function ContactPage() {
 
@@ -20,11 +21,21 @@ function ContactPage() {
     const handleEmailChange = (event) => setEmail(event.target.value);
     const handleMessageChange = (event) => setMessage(event.target.value);
 
+    const title = "Contact - Markus Tuominen"
+
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search, [], title);
+    }, []);
+
     const sendMessage = (event) => {
         event.preventDefault();
         const messageObject = { fname, lname, email, message };
         setSendButtonDisabled(true);
         axios.post('/api/contact', messageObject).then((response) => {
+            ReactGA.event({
+                category: 'User',
+                action: 'Sent a Message'
+            });
             store.addNotification({
                 title: "Success!",
                 message: response.data,
@@ -52,7 +63,7 @@ function ContactPage() {
 
     return (
         <div className="App-content">
-            <ReactTitle title="Contact - Markus Tuominen"/>
+            <ReactTitle title={title}/>
             <div className="App-content-side"></div>
             <div className="App-content-area">
                 <div className=" padded-content-area">
