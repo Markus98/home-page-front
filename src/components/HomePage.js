@@ -4,6 +4,7 @@ import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
 import "./HomePage.css"
 import ReactGA from 'react-ga';
+import Footer from './Footer';
 
 function HomePage() {
 
@@ -45,6 +46,7 @@ function HomePage() {
                 <div className="padded-content-area">
                     <div className="content-text-area" dangerouslySetInnerHTML={{__html: pageContent}}></div>
                 </div>
+                <Footer />
             </div>
             <div className="App-content-side"></div>
         </div>

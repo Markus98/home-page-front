@@ -6,6 +6,7 @@ import 'react-notifications-component/dist/theme.css'
 import { ReactTitle } from 'react-meta-tags';
 import { SocialIcon } from 'react-social-icons';
 import ReactGA from 'react-ga';
+import Footer from './Footer';
 
 function ContactPage() {
 
@@ -106,6 +107,7 @@ function ContactPage() {
                         </form>
                     </div>
                 </div>
+                <Footer />
             </div>
             <div className="App-content-side"></div>
         </div>

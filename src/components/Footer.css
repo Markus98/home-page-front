@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#footer-hr {
+    width: 80%;
+}
+
+#footer-tuominen-text {
+    font-family: "Consolas";
+    font-size: 30pt;
+    text-align: center;
+    display: block;
+}
+
+#footer-icon-container {
+
+}
+
+.footer-link-icon {
+    margin: 10px;
+}

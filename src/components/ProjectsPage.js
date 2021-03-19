@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ArticleCard from './ArticleCard';
 import { ReactTitle } from 'react-meta-tags';
 import ReactGA from 'react-ga';
+import Footer from './Footer';
 
 function ProjectsPage() {
 
@@ -46,6 +47,7 @@ function ProjectsPage() {
                         )}
                     </div>
                 </div>
+                <Footer />
             </div>
             <div className="App-content-side"></div>
         </div>

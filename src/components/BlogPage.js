@@ -6,6 +6,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
 import ReactGA from 'react-ga';
+import Footer from "./Footer";
 
 
 
@@ -59,6 +60,7 @@ function BlogPage({ apipath }) {
                     <img className="article-image" src={imagePath} style={{"width": "100%"}} />
                     <div className="article-text-area" dangerouslySetInnerHTML={{__html: postContent}} />
                 </div>
+                <Footer />
             </div>
             <div className="App-content-side"></div>
         </div>
