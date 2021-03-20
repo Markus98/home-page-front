@@ -4,9 +4,10 @@
   font-size: 16px;
 }
 
-.PageContent {
+.page-content {
   display: flex;
   justify-content: center;
+  height: calc(100% - var(--headerHeight));
 }
 
 .content-text-area {
@@ -14,7 +15,7 @@
   width: 100%;
 }
 
-.ContentImage {
+.content-image {
   animation: fade 0.4s ease-in;
 }
 

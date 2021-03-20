@@ -17,7 +17,7 @@ function DarkToggle() {
     }, [isDark]);
 
     return (
-    <div className="DarkToggle">
+    <div className="dark-toggle">
         <Toggle
             icons={{ checked: "🌙", unchecked: "🔆" }}
             aria-label="Dark mode"

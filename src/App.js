@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <ReactNotification />
       <Header />
-      <div className="PageContent">
+      <div className="page-content">
         <Switch>
           <Route path="/projects/:projectid">
             <BlogPage apipath={"/api/projects/"}/>
