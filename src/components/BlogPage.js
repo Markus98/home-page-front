@@ -7,6 +7,9 @@ import { store } from 'react-notifications-component';
 import { ReactTitle } from 'react-meta-tags';
 import ReactGA from 'react-ga';
 import Footer from "./Footer";
+import ReactMarkdown from 'react-markdown'
+import {nord} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 
 
 
@@ -17,6 +20,13 @@ function BlogPage({ apipath }) {
     const [ imagePath, setImagePath ] = useState(null);
     
     const postRoute = apipath + useParams().projectid;
+
+    // Rendered for react-markdown syntax highlighting
+    const renderers = {
+        code: ({ language, value }) => {
+            return <SyntaxHighlighter showLineNumbers={true} style={nord} language={language} children={value} />
+        }
+    }
 
     useEffect(() => {
         axios.get(postRoute).then(response => {
@@ -58,7 +68,9 @@ function BlogPage({ apipath }) {
                     <span className="article-timestamp">{makeTimeStampStr(timestamp)}</span>
                     <h1 className="article-title">{title}</h1>
                     <img className="article-image" src={imagePath} style={{"width": "100%"}} />
-                    <div className="article-text-area" dangerouslySetInnerHTML={{__html: postContent}} />
+                    <div className="article-text-area">
+                        <ReactMarkdown renderers={renderers} allowDangerousHtml={true}>{postContent}</ReactMarkdown>
+                    </div>
                 </div>
                 <Footer />
             </div>
