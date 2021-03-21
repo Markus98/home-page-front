@@ -28,9 +28,28 @@ input {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+  color: var(--lightTextColor);
+  padding-inline: 2px;
+  background-color: var(--secondaryBackgroundColor);
+  border-radius: 5px;
+}
+
+blockquote {
+  background: var(--secondaryBackgroundColor);
+  border-left: 5px solid #ccc;
+  margin: 0.5em 5px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  display: inline;
 }
 
 p {
+  font-size: 16pt;
+}
+
+li {
   font-size: 16pt;
 }
 
@@ -58,6 +77,7 @@ html {
 
   --primaryTextColor: white;
   --lightTextColor: rgb(200, 200, 200);
+  --codeColor: rgb(199, 131, 54);
   --headerColor: #282c34;
   --shadowColor: rgba(0,0,0,0.3);
   --mouseOverColor: rgba(255, 255, 255, 0.05);
@@ -70,6 +90,7 @@ html.light {
 
   --primaryTextColor: rgb(26, 28, 32);
   --lightTextColor: rgb(103, 110, 122);
+  --codeColor: rgb(59, 59, 59);
   --headerColor: #f5f5f5;
   --shadowColor: rgba(0,0,0,0.15);
   --mouseOverColor: rgba(0, 0, 0, 0.05);
