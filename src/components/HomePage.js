@@ -41,7 +41,7 @@ function HomePage() {
                             <tspan x="3" dy="1.2em">I'm Markus</tspan>
                         </text>
                     </svg>
-                    <i className="arrow down" id="front-page-down-arrow"></i>
+                    <i className="arrow-icon down" id="front-page-down-arrow"></i>
                 </div>
                 <div className="padded-content-area">
                     <div className="content-text-area" dangerouslySetInnerHTML={{__html: pageContent}}></div>

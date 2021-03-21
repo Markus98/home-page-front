@@ -61,7 +61,7 @@ function BlogPage({ apipath }) {
         <div className="App-content">
             <ReactTitle title={title}/>
             <div className="App-content-side" id="blogpage-left">
-                <Link to="/projects" id="back-button"> <i className="arrow left"></i> Back</Link>
+                <Link to="/projects" id="back-button"> <i className="arrow-icon left"></i> Back</Link>
             </div>
             <div className="App-content-area">
                 <div className="padded-content-area">
