@@ -45,6 +45,10 @@ blockquote p {
   display: inline;
 }
 
+img {
+  max-width: 100%;
+}
+
 p {
   font-size: 16pt;
 }
